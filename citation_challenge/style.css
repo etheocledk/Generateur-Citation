@@ -1,0 +1,364 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    font-family: system-ui, sans-serif;
+    /* overflow: hidden; */
+    position: relative;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: blueviolet;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.citation__container {
+    background-color: white;
+    border-radius: 30px;
+    width: 900px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.116);
+    display: flex;
+    /* overflow: hidden; */
+    justify-content: space-between;
+    gap: 25px;
+    /* height: 450px; */
+}
+
+.citation-image {
+    width: 300px;
+
+}
+
+.citation-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+span {
+    cursor: pointer;
+}
+
+.citation-text {
+    width: 500px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    margin-right: 50px;
+}
+
+.citation-text__icon,
+.citation-text__search {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 5px;
+    align-items: center;
+}
+
+.citation-text__proverbe,
+/* .citation-text__icon, */
+.citation-text__copyright {
+    margin-top: 30px;
+}
+
+.author {
+    margin-top: 20px;
+    text-align: end;
+    /*  margin-bottom: 20px; */
+}
+
+hr {
+    margin: 20px 0 30px 0;
+}
+
+.citation-text__proverbe .proverbe {
+    font-size: 17px;
+    font-style: italic;
+    line-height: 40px;
+    text-align: justify;
+}
+
+
+
+.citation-text__icon span,
+.mdi-calendar-clock {
+    color: white;
+    background-color: blueviolet;
+    font-size: 20px;
+    display: inline-block;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    line-height: 35px;
+    text-align: center;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.266);
+}
+
+.citation-text__copyright {
+    text-align: center;
+}
+
+.mdi-content-copy,
+.mdi-share-variant {
+    margin-left: 10px;
+}
+
+.input {
+    width: 200px;
+    height: 35px;
+}
+
+.input input {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.163);
+    padding-left: 35px;
+    padding-right: 15px;
+}
+
+.mdi-magnify {
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    left: 8px;
+    font-size: 25px;
+}
+
+.viewtime {
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.164);
+    position: absolute;
+    /* width: 100px;
+    height:100px; */
+    top: -140px;
+    left: -65px;
+    border-radius: 9px;
+    background-color: white;
+    padding: 15px 15px 25px 15px;
+    display: none;
+}
+
+.mdi-calendar-clock.active,
+.mdi-restore:hover,
+.mdi-content-copy:hover,
+.mdi-share-variant:hover {
+    border-color: blueviolet;
+    color: blueviolet;
+    background-color: transparent;
+}
+
+
+.viewtime.active {
+    display: block;
+}
+
+.viewtime::after {
+    content: '';
+    z-index: 10;
+    position: absolute;
+    top: 112px;
+    left: 75px;
+    height: 15px;
+    width: 15px;
+    box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.081);
+    transform: rotate(45deg);
+    background-color: rgb(255, 255, 255);
+
+}
+
+
+
+.viewtime span {
+    margin-right: 5px;
+}
+
+.viewtime .date,
+.viewtime .time {
+    display: flex;
+    white-space: nowrap;
+    align-items: center;
+    background-color: blueviolet;
+    padding: 5px;
+    color: white;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.viewtime .time .my-time,
+.viewtime .time .my-date {
+    font-size: 18px;
+}
+
+.viewtime .time .mdi-calendar-blank,
+.viewtime .time .mdi-clock-time-eight-outline {
+    font-size: 23px;
+}
+
+
+.viewtime .time {
+    margin-top: 15px;
+}
+
+blockquote p::before {
+    content: '\201C';
+    font-size: 25px;
+}
+
+blockquote p::after {
+    content: '\201D';
+    font-size: 25px;
+}
+
+.mdi-content-copy::after {
+    content: 'Copié';
+    position: absolute;
+    color: black;
+    top: -30px;
+    left: -5px;
+    font-size: 15px;
+    display: none;
+}
+
+.mdi-content-copy.active::after {
+    display: block;
+}
+
+/*button volume*/
+
+.citation-text__icon__left .mdi-volume-off {
+    display: none;
+}
+
+.citation-text__icon__left .mdi-volume-off.active {
+    display: block;
+}
+
+.citation-text__icon__left .mdi-volume-high.active {
+    display: none;
+}
+
+.citation-text__icon__left {
+    display: flex;
+}
+
+.citation-text__icon__left .partager {
+    position: absolute;
+    background-color: white;
+    /* height: 100px;
+    width: 100px; */
+    top: -80px;
+    left: 68px;
+    z-index: 10;
+    border-radius: 8px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.11);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    display: none;
+}
+
+
+.partager div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 10px;
+}
+
+.citation-text__icon__left .partager::after {
+    content: '';
+    z-index: 10;
+    position: absolute;
+    top: 92px;
+    left: -9px;
+    height: 15px;
+    width: 15px;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.081);
+    transform: rotate(45deg);
+    background-color: white;
+}
+
+.partager div:hover {
+    border-radius: 8px;
+    padding: 5px 10px;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.081);
+    background-color: rgba(137, 43, 226, 0.253);
+    color: black;
+
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+
+.overlay.active {
+    display: block;
+}
+
+.citation-text__icon__left .partager.active {
+    cursor: pointer;
+    display: block;
+}
+
+
+@media (max-width: 940px) {
+    body{
+        height: auto;
+    }
+
+    .citation__container {
+        flex-direction: column;
+        width: 95%;
+    }
+    
+    .citation-image {
+        width: 100%;
+       /*  height: 400px; */
+    }
+
+    .citation-image img {
+       /*  height: 100%; */
+        border-bottom-left-radius: 0px; 
+        border-top-right-radius: 30px;
+    }
+
+    .citation-text {
+         width: 100%;
+         padding-top: 0px;
+         padding-bottom: 0px; 
+         margin-right: 0px; 
+        padding: 20px;
+    }
+
+    .citation-text__search {
+        gap: 15px;
+    }
+
+    .citation-text__icon{
+        flex-wrap: wrap;
+    }
+}

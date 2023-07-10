@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.9.55/css/materialdesignicons.min.css">
+</head>
+
+<body>
+    
+    <div class="citation__container">
+        <div class="citation-image">
+            <img src="" alt="Auteur image">
+        </div>
+        <div class="citation-text">
+            <div class="citation-text__search">
+                <div class="input">
+                    <input type="text" placeholder="Rechercher..." list="data">
+                    <datalist id="data">
+                        <option value="Vie">
+                        <option value="Amour">
+                    </datalist>
+                    <!-- <p class="mySpan"></p> -->
+                    <span class="mdi mdi-magnify"></span>
+                    <div class="gtranslate_wrapper"></div>
+                </div>
+                <div class="calendar">
+                    <span class="mdi mdi-calendar-clock"></span>
+                    <div class="viewtime">
+                        <div class="date">
+                            <span class="mdi mdi-calendar-blank"> </span> <span class="my-date"></span>
+                        </div>
+                        <div class="time">
+                            <span class="mdi mdi-clock-time-eight-outline"> </span><span class="my-time"></span>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="citation-text__proverbe">
+
+            </div>
+
+            <hr>
+
+            <div class="citation-text__icon">
+                <div class="citation-text__icon__left">
+                    <span class="mdi mdi-volume-high"></span>
+                    <span class="mdi mdi-volume-off"></span>
+                    <span class="mdi mdi-content-copy"></span>
+                    <div><span class="mdi mdi-share-variant"></span>
+                        <div class="partager">
+                            <div class="facebook">
+                                <span class="mdi mdi-facebook"></span> Facebook
+                            </div>
+                            <div class="linkedin">
+                                <span class="mdi mdi-linkedin"></span> Linkedin
+                            </div>
+                            <div class="twitter">
+                                <span class="mdi mdi-twitter"></span> Twitter
+                            </div>
+                            <div class="whatsapp">
+                                <span class="mdi mdi-whatsapp"></span> WhatsApp
+                            </div>
+                            <!-- <span class="mdi mdi-gmail"></span> -->
+                        </div>
+                    </div>
+                </div>
+                <span class="mdi mdi-restore"></span>
+            </div>
+
+            <div class="citation-text__copyright">
+                Copyright © <strong> Ethéocle DOHOUKPEVI</strong>
+            </div>
+        </div>
+    </div>
+    <span class="overlay"></span>
+
+
+    <script src="index.js"></script>
+   <script>window.gtranslateSettings = {/* "default_language":"FR", */"native_language_names":true, "languages":["en","fr","de","it","es"], "wrapper_selector":".gtranslate_wrapper", "float_switcher_open_direction":"center", "flag_style": "2d" }</script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+</body>
+
+</html>
